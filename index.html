@@ -1,171 +1,788 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My PortFolio</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <meta
+        name="description"
+        content="Dauda Lawal — Web Developer, WordPress Developer and Technical Writer building modern digital experiences."
+    >
+
+    <meta
+        name="keywords"
+        content="Dauda Lawal, Web Developer, WordPress Developer, Technical Writer, JavaScript, React, HTML, CSS"
+    >
+
+    <meta name="author" content="Dauda Lawal">
+
+    <title>Dauda Lawal | Web Developer & Technical Writer</title>
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <!-- HTML Structure -->
-    <nav id="navbar" class="nav">
-        <ul>
-            <li>
-                <a href="#welcome-section">About</a>
-            </li>
-            <li>
-                <a href="#projects">Work</a>
-            </li>
-            <li>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                DL<span>.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" aria-label="Main navigation">
+
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
 
+            </nav>
 
-    <!-- Second Section-->
+        </div>
 
-    <section id="welcome-section">
-        <h1>Hey I'm Dauda Lawal</h1>
-        <p><i>A front-end Developer</i></p>
-        <section class="hero-media-wrapper">
-            <!-- TWITTER SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
-                viewBox="0 0 16 16">
-                <path
-                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-            </svg>
-            <!-- GITHUB -->
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
-                viewBox="0 0 16 16">
-                <path
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-            </svg>
-
-            <!-- LINKEDIN SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
-                viewBox="0 0 16 16">
-                <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-            </svg>
-        </section>
-    </section>
     </header>
-    </section>
-
-    <section id="projects" class="project-section">
-        <h2 class="projects-section-header">My Projects</h2>
-
-        <div class="projects-grid">
-            <a href="https://tiide-cuisine.netlify.app/" target="_blank" class="project project-tile">
-                <img class="project-image"
-                    src="https://user-images.githubusercontent.com/64631869/173110406-dea55109-5187-42ee-9f9c-41e3231d64d4.PNG"
-                    alt="project" />
-                <p class="project-title">
-
-                    TIIDE CUISINE WEBSITE
-
-                </p>
-            </a>
-
-            <a href="https://daslaw.github.io/Profile-Demo/" target="_blank" class="project project-tile">
-                <img class="project-image"
-                    src="https://user-images.githubusercontent.com/64631869/173111590-221c72b0-323e-419e-8b49-1679c4bbacbd.PNG"
-                    alt="project" />
-                <p class="project-title">
-
-                    PROFILE DEMO
-
-                </p>
-            </a>
-
-            <a href="https://daslaw.github.io/SM-Landing-Page/" target="_blank" class="project project-tile">
-                <img class="project-image"
-                    src="https://user-images.githubusercontent.com/64631869/173112464-d79ca28f-17c3-4522-9eb8-0c7a941eada9.PNG"
-                    alt="project" />
-                <p class="project-title">
-
-                    Landing Page
-
-                </p>
-            </a>
-
-            <a href="https://daslaw.github.io/Photo-Gallery/" target="_blank" class="project project-tile">
-                <img class="project-image"
-                    src="https://user-images.githubusercontent.com/64631869/173113114-6ba3ff52-4367-4cec-86bf-67a90ff63ae9.PNG"
-                    alt="project" />
-                <p class="project-title">
-
-                    PHOTO GALLERY
-
-                </p>
-            </a>
-
-            <a href="https://dscsurvey-form.netlify.app/" target="_blank" class="project project-tile">
-                <img class="project-image"
-                    src="https://user-images.githubusercontent.com/64631869/173115049-aad25ef0-67f4-4923-b69f-53c74857d8ae.PNG"
-                    alt="project" />
-                <p class="project-title">
-
-                    SURVEY FORM
-
-                </p>
-            </a>
-
-            <a href="https://daslaw.github.io/zuri-responsive-design-starter/" target="_blank"
-                class="project project-tile">
-                <img class="project-image"
-                    src="https://user-images.githubusercontent.com/64631869/173113714-5b3bc51c-7d27-479b-91ba-39aa8b7644e1.PNG"
-                    alt="project" />
-                <p class="project-title">
-
-                    SNAPSHOT WEBSITE
-
-                </p>
-            </a>
-        </div>
 
 
-    </section>
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section id="home" class="hero">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content reveal">
+
+                    <p class="eyebrow">
+                        WEB DEVELOPER · TECHNICAL WRITER
+                    </p>
+
+                    <h1>
+                        Building digital
+                        <span>experiences</span>
+                        that work.
+                    </h1>
+
+                    <p class="hero-description">
+                        I'm Dauda Lawal, a web developer and technical writer
+                        focused on building practical, accessible and
+                        user-friendly digital solutions.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#projects" class="btn btn-primary">
+                            View My Work
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Let's Connect
+                        </a>
+
+                    </div>
+
+                    <div class="hero-meta">
+
+                        <div>
+                            <strong>HTML</strong>
+                            <span>Structure</span>
+                        </div>
+
+                        <div>
+                            <strong>CSS</strong>
+                            <span>Design</span>
+                        </div>
+
+                        <div>
+                            <strong>JS</strong>
+                            <span>Interaction</span>
+                        </div>
+
+                        <div>
+                            <strong>WP</strong>
+                            <span>Websites</span>
+                        </div>
+                        <div>
+                            <strong>Google AI Studio</strong>
+                            <span>AI Development</span>
+                        </div>
+                        <div>
+                            <strong>SEO</strong>
+                            <span>Search Engine Optimization</span>
+                        </div>
+                    </div>
+
+                </div>
 
 
-    <!-- Third Section-->
+                <div class="hero-image reveal">
+
+                    <div class="image-frame">
+
+                        <img
+                            src="https://i.ibb.co/cjVBTqP/Daslaw-profile.png"
+                            alt="Portrait of Dauda Lawal"
+                        >
+
+                    </div>
+
+                    <div class="floating-card">
+                        <span class="status-dot"></span>
+                        Available for opportunities
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
-    <section id="contact" class="contact-section">
-        <div class="contact-section-header">
-            <h2 id="con">Let's work together...</h2>
-            <p>Drop your message</p>
-        </div>
-        <div class="form">
-            <form id="form" action="mailto:daslaw26@gmail.com/email-submit">
-                <input type="email" id="email" placeholder="Your Email Address" name="email" required /><br>
-                <button class="btn contact-submit">Send</button>
+        <!-- ================= ABOUT ================= -->
 
-            </form>
-        </div>
-    </section>
+        <section id="about" class="section">
 
-    <!-- END CONTACT SECTION -->
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="eyebrow">ABOUT ME</p>
+
+                    <h2>
+                        Technology with a
+                        <span>purpose.</span>
+                    </h2>
+
+                </div>
 
 
-    <!-- START FOOTER SECTION -->
+                <div class="about-grid">
+
+                    <div class="about-text reveal">
+
+                        <p class="lead">
+                            I’m a technology professional with experience
+                            across web development, technical writing,
+                            digital marketing, AI and digital transformation.
+                        </p>
+
+                        <p>
+                            I studied Technology Education at the University
+                            of Ilorin and have continued to build practical
+                            experience by working on websites, digital
+                            platforms, content systems and technology
+                            education projects.
+                        </p>
+
+                        <p>
+                            My approach combines technical implementation
+                            with clear communication. I enjoy taking an idea,
+                            understanding the problem behind it and turning
+                            it into a useful digital product.
+                        </p>
+
+                    </div>
+
+
+                    <aside class="about-card reveal">
+
+                        <p class="card-label">CURRENT FOCUS</p>
+
+                        <h3>
+                            Building better digital experiences.
+                        </h3>
+
+                        <ul>
+                            <li>Web Development</li>
+                            <li>WordPress Development</li>
+                            <li>Technical Documentation</li>
+                            <li>AI & Emerging Technology</li>
+                            <li>Cloud & Digital Transformation</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXPERIENCE ================= -->
+
+        <section id="experience" class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="eyebrow">EXPERIENCE</p>
+
+                    <h2>
+                        Where I've
+                        <span>contributed.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <article class="timeline-item reveal">
+
+                        <div class="timeline-date">
+                            2025 — Present
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Marketing & Technology Professional
+                            </h3>
+
+                            <p class="company">
+                                MALhub
+                            </p>
+
+                            <p>
+                                Supporting technology education, digital
+                                marketing, SEO, content development,
+                                newsletters, student engagement and
+                                technology-focused initiatives.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="timeline-item reveal">
+
+                        <div class="timeline-date">
+                            2023 — Present
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Web Developer & WordPress Developer
+                            </h3>
+
+                            <p class="company">
+                                Freelance / Client Projects
+                            </p>
+
+                            <p>
+                                Designing, developing and maintaining
+                                responsive websites using WordPress,
+                                HTML, CSS and JavaScript, with a focus on
+                                usability, SEO and performance.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="timeline-item reveal">
+
+                        <div class="timeline-date">
+                            2023 — 2024
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Technical Writer & Digital Transformation
+                                Professional
+                            </h3>
+
+                            <p>
+                                Created technical documentation, digital
+                                content and technology resources while
+                                contributing to digital transformation
+                                initiatives.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <div class="container">
+
+                <div class="section-heading project-heading reveal">
+
+                    <div>
+                        <p class="eyebrow">SELECTED WORK</p>
+
+                        <h2>
+                            Projects I've
+                            <span>built.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-intro">
+                        A selection of websites and digital projects
+                        demonstrating my experience in web development,
+                        WordPress and digital product implementation.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- PROJECT 01 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-type">
+                                E-COMMERCE · WORDPRESS
+                            </p>
+
+                            <h3>
+                                House of Sota Africa
+                            </h3>
+
+                            <p>
+                                An e-commerce fashion website created to
+                                showcase and sell contemporary African
+                                fashion collections for women, men and kids.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>WordPress</span>
+                                <span>WooCommerce</span>
+                                <span>Responsive Design</span>
+
+                            </div>
+
+                            <a
+                                href="https://houseofsota.africa/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Live Project
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 02 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-type">
+                                EDUCATION · WEB DEVELOPMENT
+                            </p>
+
+                            <h3>
+                                CAMANDA Academy
+                            </h3>
+
+                            <p>
+                                A technology and professional learning
+                                platform offering practical courses,
+                                live classes, masterclasses and career-focused
+                                digital skills training.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>WordPress</span>
+                                <span>Education</span>
+                                <span>UX</span>
+                                <span>SEO</span>
+
+                            </div>
+
+                            <a
+                                href="https://camanda.academy/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Live Project
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 03 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-type">
+                                AGRICULTURE · BUSINESS WEBSITE
+                            </p>
+
+                            <h3>
+                                Green Hut Farming
+                            </h3>
+
+                            <p>
+                                A professional website for an agricultural
+                                consultancy focused on farm development,
+                                agribusiness planning and sustainable
+                                agricultural solutions.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>WordPress</span>
+                                <span>Business Website</span>
+                                <span>Responsive UI</span>
+
+                            </div>
+
+                            <a
+                                href="https://greenhutfarming.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Live Project
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 04 -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-number">
+                            04
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-type">
+                                SERVICES · CORPORATE WEBSITE
+                            </p>
+
+                            <h3>
+                                EMBuilt Services
+                            </h3>
+
+                            <p>
+                                A professional business website designed
+                                to establish a strong online presence and
+                                communicate services clearly to potential
+                                clients.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Web Development</span>
+                                <span>WordPress</span>
+                                <span>UI Design</span>
+
+                            </div>
+
+                            <a
+                                href="https://embuiltservices.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Live Project
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="eyebrow">SKILLS & TOOLS</p>
+
+                    <h2>
+                        Tools I use to
+                        <span>build.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-layout">
+
+                    <div class="skills-category reveal">
+
+                        <h3>Development</h3>
+
+                        <div class="skill-list">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MySQL</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skills-category reveal">
+
+                        <h3>Web & CMS</h3>
+
+                        <div class="skill-list">
+
+                            <span>WordPress</span>
+                            <span>Elementor</span>
+                            <span>WooCommerce</span>
+                            <span>SEO</span>
+                            <span>Responsive Design</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skills-category reveal">
+
+                        <h3>Technology</h3>
+
+                        <div class="skill-list">
+
+                            <span>AI</span>
+                            <span>Cloud Computing</span>
+                            <span>AWS</span>
+                            <span>Git</span>
+                            <span>APIs</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skills-category reveal">
+
+                        <h3>Communication</h3>
+
+                        <div class="skill-list">
+
+                            <span>Technical Writing</span>
+                            <span>Documentation</span>
+                            <span>Content Strategy</span>
+                            <span>Digital Marketing</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA / CONTACT ================= -->
+
+        <section id="contact" class="contact-section">
+
+            <div class="container">
+
+                <div class="contact-card reveal">
+
+                    <p class="eyebrow">
+                        LET'S WORK TOGETHER
+                    </p>
+
+                    <h2>
+                        Have a project
+                        <span>in mind?</span>
+                    </h2>
+
+                    <p>
+                        I'm open to web development opportunities,
+                        technical writing projects, collaborations and
+                        digital technology initiatives.
+                    </p>
+
+
+                    <div class="contact-actions">
+                        <a
+                            href="mailto:daslaw26@gmail.com"
+                            class="btn btn-light"
+                        >
+                            Start a Conversation
+                        </a>
+
+                        <a
+                            href="tel:+2347060965969"
+                            class="btn btn-light"
+                        >
+                            Call Me
+                        </a>
+
+                        <a
+                            href="https://wa.me/2347060965969?text=Hello%20Dauda%2C%20I%20want%20to%20work%20with%20you."
+                            class="btn btn-light"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
-        <p id="foot">
-            &copy; 2021, Made with ❤ by
-            <a id="fot" href="https://www.linkedin.com/in/madansinha/" target="_blank">Daslaw
-            </a>
-        </p>
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>Dauda Lawal</strong>
+                <p>
+                    Web Developer · Technical Writer
+                </p>
+            </div>
+
+            <div class="social-links">
+
+                <a
+                    href="https://linkedin.com/in/daslaw26"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/daslaw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="tel:+2347060965969"
+                    aria-label="Call Dauda"
+                >
+                    +234 706 096 5969
+                </a>
+
+                <a
+                    href="https://wa.me/2347060965969?text=Hello%20Dauda%2C%20I%20want%20to%20work%20with%20you."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Chat on WhatsApp"
+                >
+                    WhatsApp
+                </a>
+
+                <a
+                    href="mailto:daslaw26@gmail.com"
+                    aria-label="Email Dauda"
+                >
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            <p>
+                © <span id="year"></span> Dauda Lawal. All rights reserved.
+            </p>
+
+        </div>
+
     </footer>
-
-    <!-- END FOOTER SECTION -->
-
+    <button id="backToTop" aria-label="Back to top">↑</button>
+    <script src="./javascript/script.js"></script>
 
 </body>
-
 </html>
